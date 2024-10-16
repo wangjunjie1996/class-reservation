@@ -1,0 +1,29 @@
+<view class="register-wrapper">
+  <view class="register-title">完成注册，只差一步</view>
+  <view class="register-des">注册需要基本信息</view>
+
+  <view class="register-form-wrapper">
+    <view class="register-form-row">
+      <view class="register-form-label">手机号</view>
+      <input class="register-form-input" type="number" bindinput="onPhoneChange" />
+    </view>
+    <view class="register-form-row">
+      <view class="register-form-label">姓名</view>
+      <input class="register-form-input" bindinput="onNameChange" />
+    </view>
+    <view class="register-form-row">
+      <view class="register-form-label">性别</view>
+      <radio-group class="radio-group" bindchange="onSexChange">
+        <label class="radio">
+          <radio value="man" color="#fe5f53"/>男
+        </label>
+        <label class="radio">
+          <radio value="woman" color="#fe5f53" />女
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="register-button" bindtap="register">注册</view>
+  <view class="gotologin-button" bindtap="gotoLogin">去登陆</view>
+</view>

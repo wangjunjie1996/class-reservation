@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reservation/index",
+    "pages/user-center/index",
+    "pages/register/index",
+    "pages/login/index",
+    "pages/admin-login/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#FE5F53",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/reservation/index",
+        "text": "预约",
+        "iconPath": "images/icons/reservation.png",
+        "selectedIconPath": "images/icons/reservation-active.png"
+      },
+      {
+        "pagePath": "pages/user-center/index",
+        "text": "个人中心",
+        "iconPath": "images/icons/user.png",
+        "selectedIconPath": "images/icons/user-active.png"
+      }
+    ]
+  }
+}

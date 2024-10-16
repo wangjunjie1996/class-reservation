@@ -1,0 +1,29 @@
+<view class="login-wrapper">
+  <image src="../../images/login_bg.png" class="bg" />
+  <view class="login-box">
+    <view class="login-title">欢迎登录</view>
+    <image src="../../images/login-logo.png" class="login-logo" />
+
+    <view class="form">
+      <view class="form-row">
+        <image class="username" src="../../images/icons/username.png"></image>
+        <view class="line"></view>
+        <input class="input" placeholder="姓名" bindinput="onNameChange" />
+      </view>
+
+      <view class="form-row">
+        <image class="username" src="../../images/icons/phone.png"></image>
+        <view class="line"></view>
+        <input class="input" password placeholder="手机号" bindinput="onPhoneChange" />
+      </view>
+    </view>
+
+    <view class="login-btn" bindtap="onLogin">登录</view>
+    <view class="go-register" bindtap="onRegister">去注册</view>
+
+    <view class="footer">
+      <view bindtap="ty">继续体验</view>
+      <view class="admin-login" bindtap="adminLogin">管理员登录</view>
+    </view>
+  </view>
+</view>

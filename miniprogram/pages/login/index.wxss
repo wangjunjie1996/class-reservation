@@ -1,0 +1,105 @@
+.login-wrapper {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding-top: 150rpx;
+}
+
+.login-title {
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.login-logo {
+  width: 130rpx;
+  height: 130rpx;
+  margin-top: 90rpx;
+}
+
+.form {
+  width: 80%;
+  border-radius: 24rpx;
+  background: #f7150542;
+  display: flex;
+  flex-direction: column;
+  margin: 104rpx auto 58rpx;
+}
+
+.username {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 36rpx 32rpx;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 1px;
+  height: 50rpx;
+  background: rgb(90, 90, 90);
+  margin-right: 24rpx;
+}
+
+.input {
+  height: 50rpx;
+}
+
+.login-btn {
+  width: 80%;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: #fe5f53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 60rpx;
+  font-size: 34rpx;
+}
+
+.footer {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 106rpx auto 66rpx;
+}
+
+.go-register {
+  width: 80%;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: #dbcbca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(90, 2, 255);
+  margin-top: 30rpx;
+  font-size: 34rpx;
+}
+
+.admin-login {
+  color: rgb(92, 8, 248);
+}

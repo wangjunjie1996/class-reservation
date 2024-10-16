@@ -1,0 +1,85 @@
+.register-wrapper {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-title {
+  font-size: 42rpx;
+  font-weight: bold;
+  margin-top: 150rpx;
+}
+
+.register-des {
+  font-size: 26rpx;
+  color: rgb(131, 131, 131);
+  font-weight: 600;
+  margin-top: 20rpx;
+}
+
+.register-form-wrapper {
+  width: 100%;
+  margin-top: 120rpx;
+  box-sizing: border-box;
+  padding: 0 70rpx;
+}
+
+.register-form-row {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e9e9e9;
+}
+
+.register-form-row:last-child {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.register-form-label {
+  width: 130rpx;
+}
+
+.register-form-input {
+  height: 88rpx;
+  flex: 1;
+}
+
+.radio {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 34rpx;
+}
+
+.radio-group {
+  display: flex !important;
+  align-items: center;
+}
+
+.register-button {
+  width: 90%;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: #fe5f53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 100rpx;
+  font-size: 34rpx;
+}
+
+.gotologin-button {
+  width: 90%;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: #afafaf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 40rpx;
+  font-size: 34rpx;
+}

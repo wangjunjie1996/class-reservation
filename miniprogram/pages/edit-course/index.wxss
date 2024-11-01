@@ -1,0 +1,43 @@
+.form-page {
+  padding: 40rpx;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 26rpx;
+  margin-bottom: 26rpx;
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.form-item form-label {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 14rpx;
+  color: rgb(0, 0, 0);
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.form-item input {
+  flex: 1;
+}
+
+.picker {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.form-label text:last-child {
+  color: red !important;
+}
+
+.sub {
+  width: 400rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: rgb(245, 93, 5);
+}

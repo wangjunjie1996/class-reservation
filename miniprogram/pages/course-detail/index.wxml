@@ -1,0 +1,54 @@
+<view>
+  <view class="course-box">
+    <view class="header">
+      <view class="left">
+        <image src="../../images/logo.png"></image>
+        <text class="course-header-name">{{ detail.name }}</text>
+      </view>
+      <view class="course-time-between">{{ detail.courseTimeBetween }}</view>
+    </view>
+
+    <view class="content-wrap">
+      <view class="content-row">
+        <text>校区</text>
+        <text>{{ detail.address || '未填写' }}</text>
+      </view>
+      <view class="content-row">
+        <text>老师</text>
+        <text>{{ detail.teacher || '未填写' }}</text>
+      </view>
+      <view class="content-row">
+        <text>课程时长</text>
+        <text>{{ detail.courseTime || '0' }} 分钟</text>
+      </view>
+    </view>
+
+    <view class="footer-wrap">
+      <view class="reservation-count">满课: {{ detail.maxPeople }}</view>
+      <view style="display: flex; align-items: center;">
+        <button style="margin-right: 24rpx;" bindtap="gotoEdit">编辑</button>
+        <button bindtap="onCancel">取消</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="tab">
+    <view class="tab-col {{ status === 1 ? 'sel' : '' }}" data-status="1" bindtap="onTab">已预约</view>
+    <view class="tab-col {{ status === 0 ? 'sel' : '' }}" data-status="0" bindtap="onTab">排队中</view>
+    <view class="tab-col {{ status === 2 ? 'sel' : '' }}" data-status="2" bindtap="onTab">已取消</view>
+  </view>
+
+  <view class="reservations">
+    <block wx:for="{{ reservations }}" wx:key="index">
+      <view class="reservation-box">
+        <view style="display: flex; flex-direction: column;">
+          <view style="font-weight: bold; font-size: 36rpx;">{{ item.userList[0] ? item.userList[0].name : '-' }}</view>
+          <view style="font-size: 28rpx; font-weight: 400; margin-top: 12rpx;">({{ item.userList[0] ? item.userList[0].phone : '-' }})</view>
+        </view>
+        <view class="status" wx:if="{{ status === 2 }}">已取消</view>
+        <view class="status" wx:elif="{{ status === 1 }}">已预约</view>
+        <view class="status" wx:elif="{{ status === 0 }}">排队中</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+<view class="form-page">
+  <form bindsubmit="submitForm">
+    <view class="form-item">
+      <view class="form-label">
+        <text>课程名称：</text>
+        <text>*</text>
+      </view>
+      <input type="text" name="name" placeholder="请输入课程名称" />
+    </view>
+    <view class="form-item">
+      <text>上课校区：</text>
+      <input type="text" name="address" placeholder="请输入上课校区" />
+    </view>
+    <view class="form-item">
+      <text>上课老师：</text>
+      <input type="text" name="teacher" placeholder="请输入上课老师" />
+    </view>
+    <view class="form-item">
+      <view class="form-label">
+        <text>满班人数：</text>
+        <text>*</text>
+      </view>
+      <input type="number" name="maxPeople" placeholder="请输入满班人数" />
+    </view>
+    <view class="form-item">
+      <view class="form-label">
+        <text>课程时长（分钟）：</text>
+        <text>*</text>
+      </view>
+      <input type="number" name="courseTime" placeholder="请输入课程时长" />
+    </view>
+    <view class="form-item">
+      <view class="form-label">
+        <text>开始时间：</text>
+        <text>*</text>
+      </view>
+      <picker mode="time" name="startTime" value="{{startTime}}" start="05:00" end="22:00" bindchange="onStartTime">
+        <view class="picker">
+          {{startTime}}
+        </view>
+      </picker>
+    </view>
+    <button class="sub" form-type="submit">提交</button>
+  </form>
+</view>

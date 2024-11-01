@@ -1,0 +1,51 @@
+.container {
+  padding: 40rpx;
+  background-color: #fff;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.label {
+  width: 160rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.input {
+  flex: 1;
+  padding: 20rpx;
+  border: 1px solid #ddd;
+  border-radius: 8rpx;
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.radio-label {
+  margin-right: 40rpx;
+}
+
+.radio-label radio {
+  margin-right: 10rpx;
+}
+
+.submit-btn {
+  width: 500rpx;
+  padding: 20rpx;
+  background-color: #fc3d04;
+  color: white;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  margin: 40rpx auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

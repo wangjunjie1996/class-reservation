@@ -1,2 +1,71 @@
-<!--pages/reservation/index.wxml-->
-<text>pages/reservation/index.wxml</text>
+<view class="page-wrapper">
+  <calendar bind:dateChange="dateChange"></calendar>
+
+  <view wx:if="{{ course.length > 0 }}" class="course-list">
+    <block wx:for="{{ course }}" wx:key="index">
+      <view class="course-box">
+        <view class="header">
+          <view class="left">
+            <image src="../../images/logo.png"></image>
+            <text class="course-header-name">{{ item.name }}</text>
+          </view>
+          <view class="course-time-between">{{ item.courseTimeBetween }}</view>
+        </view>
+
+        <view class="content-wrap">
+          <view class="content-row">
+            <text>校区</text>
+            <text>{{ item.address || '未填写' }}</text>
+          </view>
+          <view class="content-row">
+            <text>老师</text>
+            <text>{{ item.teacher || '未填写' }}</text>
+          </view>
+          <view class="content-row">
+            <text>课程时长</text>
+            <text>{{ item.courseTime || '0' }} 分钟</text>
+          </view>
+        </view>
+
+        <view class="footer-wrap">
+          <view class="reservation-count">{{ item.reservationCount }}/{{ item.maxPeople }}</view>
+          <button wx:if="{{ user && user.isAdmin }}" data-course-id="{{ item._id }}" bindtap="gotoDetail">查看详情</button>
+          <view wx:else style="display: flex; align-items: center;">
+            <text class="have" wx:if="{{ item.have }}">已预约</text>
+            <text class="have" wx:elif="{{ item.wait }}">等位中</text>
+            <button class="end" wx:if="{{ item.end }}">已结束</button>
+            <button
+              wx:elif="{{ item.have || item.wait }}"
+              data-course-id="{{ item._id }}"
+              bindtap="cancelReservation"
+            >取消</button>
+            <button
+              wx:elif="{{ item.reservationCount < item.maxPeople }}"
+              data-course-id="{{ item._id }}"
+              data-status="1"
+              bindtap="reservation"
+            >预约</button>
+            <button
+              wx:elif="{{ item.reservationCount === item.maxPeople }}"
+              data-course-id="{{ item._id }}"
+              data-status="0"
+              bindtap="reservation"
+            >等位</button>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else class="course-list">
+    <image class="no-data" src="../../images/icons/no-data.svg"></image>
+  </view>
+
+  <view wx:if="{{ user.isAdmin }}" class="add-class" bindtap="gotoAddClass">+</view>
+
+  <view wx:if="{{ showLoginPanel }}" class="show-login-panel">
+    <view class="login-panel">
+      <image src="../../images/icons/close.png" bindtap="closeLoginPanel"></image>
+      <button bindtap="toLogin">去登陆</button>
+    </view>
+  </view>
+</view>

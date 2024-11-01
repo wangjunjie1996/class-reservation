@@ -1,0 +1,13 @@
+<view class="user-list">
+  <view wx:for="{{ userList }}" wx:key="index" class="user-wrapper">
+    <image src="../../images/icons/dh.svg"></image>
+    <view class="user-info">
+      <view class="name">
+        <view>{{ item.name }}</view>
+        <view class="sex">{{ item.sex === 'man' ? '男' : '女' }}</view>
+      </view>
+      <view class="phone">{{ item.phone || '- - - -' }}</view>
+    </view>
+    <view class="del-btn" data-id="{{ item._id }}" bindtap="onDelUser">删除</view>
+  </view>
+</view>

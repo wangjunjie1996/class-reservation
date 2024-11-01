@@ -5,13 +5,18 @@
     "pages/user-center/index",
     "pages/register/index",
     "pages/login/index",
-    "pages/admin-login/index"
+    "pages/admin-login/index",
+    "pages/add-course/index",
+    "pages/course-detail/index",
+    "pages/edit-course/index",
+    "pages/user-list/index",
+    "pages/user-edit/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

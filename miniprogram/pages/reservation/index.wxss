@@ -1,1 +1,206 @@
-/* pages/reservation/index.wxss */
+.page-wrapper {
+  width: 100vw;
+}
+
+.add-class {
+  position: fixed;
+  right: 30rpx;
+  bottom: 70rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  background: rgb(248, 79, 0);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56rpx;
+  font-weight: bold;
+  line-height: 24rpx;
+}
+
+.add-class label {
+  display: inline;
+}
+
+.course-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100rpx;
+}
+
+.course-box {
+  width: 95%;
+  border-radius: 18rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 28rpx auto 0;
+}
+
+.course-box .header {
+  width: 100%;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 0;
+}
+
+.course-box .header .left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.course-box .header .left image {
+  width: 76rpx;
+  min-width: 76rpx;
+  height: 76rpx;
+  border-radius: 12rpx;
+  margin: 0 26rpx;
+}
+
+.course-header-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  box-sizing: border-box;
+  line-height: 50rpx;
+  word-break: break-all;
+}
+
+.course-time-between {
+  width: 250rpx;
+  border-radius: 12rpx;
+  background: rgb(255, 225, 190);
+  color: rgb(161, 5, 0);
+  padding: 10rpx;
+  margin: 0 16rpx;
+  font-weight: bold;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 1px solid rgb(235, 234, 234);
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 26rpx 0;
+  font-size: 28rpx;
+  color: rgb(172, 81, 59);
+}
+
+.content-row text:first-child {
+  width: 200rpx;
+  color: rgb(134, 134, 134);
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 26rpx;
+}
+
+.reservation-count {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgb(173, 56, 2);
+  flex: 1;
+}
+
+.reservation-count text {
+  font-size: 26rpx;
+  margin-right: 12rpx;
+}
+
+.footer-wrap button {
+  width: 160rpx;
+  height: 56rpx;
+  border-radius: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, rgb(90, 33, 0), rgb(255, 102, 0));
+  color: #fff;
+  font-size: 24rpx;
+  padding: 0 !important;
+}
+
+.footer-wrap .end {
+  background: rgb(141, 141, 141);
+}
+
+.have {
+  margin-right: 28rpx;
+  color: rgb(0, 66, 0);
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.show-login-panel {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(68, 68, 68, 0.7);
+  z-index: 1000;
+}
+
+.login-panel {
+  position: relative;
+  width: 80%;
+  background: #fff;
+  border-radius: 14rpx;
+  min-height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.login-panel text {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.login-panel button {
+  width: 170rpx;
+  height: 66rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: chocolate;
+  font-size: 28rpx;
+  padding: 0 !important;
+  color: #fff;
+  margin: 44rpx 0 24rpx;
+}
+
+.login-panel image {
+  position: absolute;
+  width: 48rpx;
+  height: 48rpx;
+  right: 14rpx;
+  top: 14rpx;
+}
+
+.no-data {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 86rpx auto;
+}

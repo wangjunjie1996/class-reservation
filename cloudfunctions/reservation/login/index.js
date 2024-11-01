@@ -43,3 +43,65 @@ exports.adminLogin = async (event, context, cloudParams) => {
     };
   }
 };
+
+// 用户列表
+exports.userList = async (event, context, cloudParams) => {
+  const { cloud, db } = cloudParams;
+  const _ = db.command;
+
+  try {
+    const { data: users } = await db.collection('user').where({
+      isAdmin: _.neq(true)
+    }).get();
+    return users || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+// 删除用户
+
+exports.delUser = async (event, context, cloudParams) => {
+  const { cloud, db } = cloudParams;
+  const params = event.params || {};
+
+  try {
+    await db.collection('user').doc(params._id).remove();
+    return {
+      success: true,
+      errorMessage: '删除用户成功',
+      data: {}
+    };
+  } catch (e) {
+    return {
+      success: false,
+      errorMessage: '删除用户失败',
+      data: {}
+    };
+  }
+}
+
+// 编辑用户
+exports.editUser = async (event, context, cloudParams) => {
+  const { cloud, db } = cloudParams;
+  const params = event.params || {};
+  const id = params.id;
+  delete params.id;
+
+  try {
+    const data = await db.collection('user').doc(id).update({
+      data: params
+    });
+    return {
+      success: true,
+      errorMessage: '',
+      data: { _id: data._id }
+    };
+  } catch (e) {
+    return {
+      success: false,
+      errorMessage: '修改失败',
+      data: {}
+    };
+  }
+}

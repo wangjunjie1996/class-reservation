@@ -24,7 +24,7 @@
     teacher: string, // 上课老师
     maxPeople: number, // 满班人数
     courseTime: number, // 课程时长(分钟)
-    startTime: Date,
+    startTime: string,
     isDelete: boolean,
     createdAt: Date,
 }
@@ -38,6 +38,7 @@
     userId: string,
     courseId: string,
     status: number, // 预约状态 0: 排队 1: 已预约 2: 已取消
+    time: string, // 预约上课时间 年-月-日
     createdAt: Date,
 }
 ```

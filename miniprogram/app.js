@@ -41,6 +41,13 @@ App({
     }
   },
 
+  logout: async function () {
+    await wx.setStorageSync('isLogin', false);
+    await wx.setStorageSync('userInfo', null);
+    this.globalData.isLogin = false;
+    this.globalData.userInfo = null;
+  },
+
   globalData: {
     isLogin: false,
     userInfo: null

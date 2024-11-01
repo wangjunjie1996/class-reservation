@@ -1,66 +1,47 @@
-// pages/user-center/index.js
+var app = getApp();
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    navBarHeight: 40,
+    statusBarHeight: 20,
+    user: {},
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow() {
+    const { statusBarHeight } = wx.getWindowInfo();
+    const menuButtonInfo = wx.getMenuButtonBoundingClientRect();
+    const navBarHeight =
+      menuButtonInfo.height + (menuButtonInfo.top - statusBarHeight) * 2;
 
+    this.setData({
+      navBarHeight,
+      statusBarHeight,
+      user: app.globalData.userInfo,
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  toLogin() {
+    wx.reLaunch({
+      url: '/pages/login/index',
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
+  gotoUserList() {
+    wx.navigateTo({
+      url: '/pages/user-list/index',
+    })
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
+  gotoUserEdit() {
+    wx.navigateTo({
+      url: '/pages/user-edit/index',
+    })
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  logout() {
+    app.logout();
+    wx.reLaunch({
+      url: '/pages/login/index',
+    })
   }
-})
+});

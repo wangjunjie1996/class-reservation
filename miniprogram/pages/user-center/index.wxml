@@ -1,2 +1,33 @@
-<!--pages/user-center/index.wxml-->
-<text>pages/user-center/index.wxml</text>
+<view class="user-center-wrap">
+  <view class="nav-bar">
+    <view class="status-bar" style="height: {{ statusBarHeight }}px"></view>
+    <view class="nav" style="height: {{ navBarHeight }}px">个人中心</view>
+  </view>
+  <view class="top" style="padding-top: {{ navBarHeight + statusBarHeight }}px">
+    <view class="top-con">
+      <image src="../../images/default_user.png" class="default-user-png" />
+      <view class="user-info" wx:if="{{ user && user._id }}">
+        <view class="name">
+          <view>{{ user.name || '-' }}</view>
+          <view class="sex">( {{ user.sex === 'man' ? '男' : (user.sex === 'woman' ? '女' : '--') }} )</view>
+        </view>
+        <view class="phone">{{ user.phone || '-' }}</view>
+      </view>
+      <view wx:else>未登录</view>
+    </view>
+  </view>
+
+  <view class="menu-wrap">
+    <view class="menu-row" wx:if="{{ user && user._id }}" bindtap="gotoUserEdit">
+      <image src="../../images/icons/re-list.png" />
+      <view class="label">修改个人信息</view>
+    </view>
+    <view class="menu-row" bindtap="gotoUserList" wx:if="{{ user.isAdmin }}">
+      <image src="../../images/icons/re-list.png" />
+      <view class="label">用户列表</view>
+    </view>
+  </view>
+
+  <view class="log-out" wx:if="{{ user && user._id }}" bindtap="logout">退出登录</view>
+  <view class="log-out" wx:else bindtap="toLogin">去登陆</view>
+</view>

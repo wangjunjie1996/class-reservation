@@ -1,0 +1,16 @@
+<view class="calendar-wrapper">
+  <scroll-view scroll-x="true" style="width: 100%; white-space: nowrap;">
+    <view
+      class="calendar-col {{ item.day === day ? 'select' : '' }}"
+      data-year="{{ item.year }}"
+      data-month="{{ item.month }}"
+      data-day="{{ item.day }}"
+      bindtap="onDayChange"
+      wx:for="{{ dateList }}"
+      wx:key="index"
+    >
+      <view class="week">{{ index === 0 ? '今日' : item.week }}</view>
+      <view class="day"> {{ item.day }}</view>
+    </view>
+  </scroll-view>
+</view>

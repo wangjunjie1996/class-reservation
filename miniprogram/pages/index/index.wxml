@@ -1,2 +1,10 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="index-wrap">
+  <view class="top"></view>
+  <view class="notice">
+    早教课预约: 免费亲子早教课
+  </view>
+  <view class="box">
+    <image src="../../images/logo.png"></image>
+    <view class="box-name">桐悦瑞马意墅幼儿园早教</view>
+  </view>
+</view>

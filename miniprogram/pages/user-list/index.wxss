@@ -1,0 +1,56 @@
+.user-list {
+  width: 100vw;
+}
+
+.user-wrapper {
+  width: 88vw;
+  height: 230rpx;
+  background: #fff;
+  margin: 50rpx auto;
+  border-radius: 16rpx;
+  box-shadow: 8rpx 8rpx 24rpx 2rpx rgba(102, 102, 102, 0.7);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 16rpx 24rpx;
+  position: relative;
+}
+
+.user-wrapper image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 16rpx 1rpx rgba(102, 102, 102, 0.6);
+  margin-right: 24rpx;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.user-info .name {
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.user-info .phone {
+  font-size: 26rpx;
+  color: rgb(95, 95, 95);
+}
+
+.sex {
+  margin-left: 24rpx;
+  font-size: 30rpx;
+  color: rgb(209, 118, 0);
+}
+
+.del-btn {
+  padding: 12rpx;
+  margin-right: 12rpx;
+  color: rgb(253, 9, 9);
+}

@@ -1,0 +1,39 @@
+.calendar-wrapper {
+  width: 100%;
+  height: 150rpx;
+  background: #fff;
+  margin-bottom: 14rpx;
+}
+
+.calendar-col {
+  width: 68rpx;
+  border-radius: 34rpx;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rpx;
+  font-size: 26rpx;
+}
+
+.week {
+  margin: 12rpx 0;
+}
+
+.calendar-col.select {
+  background: rgb(148, 62, 0);
+}
+
+.calendar-col.select .week {
+  color: #fff;
+}
+
+.calendar-col.select .day {
+  width: 54rpx;
+  height: 54rpx;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rpx;
+}
